@@ -84,7 +84,7 @@ We welcome contributions! Please open issues or submit pull requests for new fea
 
 ## 📧 Contact
 
-For support or suggestions, reach out at [your-email@example.com](mailto:your-email@example.com)
+For support or suggestions, reach out at [your-email@example.com](vipulpower2009@gmail.com)
 
 ---
 
