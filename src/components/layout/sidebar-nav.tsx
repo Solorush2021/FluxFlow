@@ -3,7 +3,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Boxes, Brain, LayoutDashboard, Truck, Settings, UserCircle } from 'lucide-react';
+import { Boxes, Brain, LayoutDashboard, Truck, Settings, UserCircle, FileText } from 'lucide-react';
 
 import type { NavItem } from '@/types';
 import { cn } from '@/lib/utils';
@@ -33,6 +33,11 @@ export const navItems: NavItem[] = [
     title: 'AI Suggestions',
     href: '/ai-suggestions',
     icon: Brain,
+  },
+  {
+    title: 'Reports',
+    href: '/reports',
+    icon: FileText,
   },
   {
     title: 'Settings',
