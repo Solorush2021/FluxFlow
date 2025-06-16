@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -16,9 +17,10 @@ import { HeaderNav } from './header-nav';
 import { Button } from '@/components/ui/button';
 import { LogOut } from 'lucide-react';
 import Link from 'next/link';
+import { useToast } from '@/hooks/use-toast'; // Added useToast import
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
-  // Attempt to read sidebar state from cookie, default to true (expanded)
+  const { toast } = useToast(); // Initialize toast
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(true);
 
   React.useEffect(() => {
@@ -41,6 +43,16 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     }
   };
 
+  const handleLogout = () => {
+    console.log("Logout button clicked. Implement actual logout logic here.");
+    toast({
+      title: "Logged Out (Simulated)",
+      description: "You have been successfully logged out.",
+      variant: "default", 
+    });
+    // Add actual logout logic, e.g., redirecting to login page, clearing session
+  };
+
 
   return (
     <SidebarProvider open={isSidebarOpen} onOpenChange={handleSidebarOpenChange} defaultOpen={true}>
@@ -59,7 +71,11 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           <SidebarNav />
         </SidebarContent>
         <SidebarFooter className="p-4 border-t border-sidebar-border">
-          <Button variant="ghost" className="w-full justify-start gap-2 group-data-[collapsible=icon]:justify-center">
+          <Button 
+            variant="ghost" 
+            className="w-full justify-start gap-2 group-data-[collapsible=icon]:justify-center"
+            onClick={handleLogout} // Added onClick handler
+          >
             <LogOut className="h-5 w-5" />
             <span className="font-body group-data-[collapsible=icon]:hidden">Logout</span>
           </Button>

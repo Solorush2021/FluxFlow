@@ -11,26 +11,32 @@ export function Logo(props: SVGProps<SVGSVGElement>) {
       {...props}
     >
       <defs>
-        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" style={{ stopColor: 'hsl(var(--primary))', stopOpacity: 1 }} />
           <stop offset="100%" style={{ stopColor: 'hsl(var(--accent))', stopOpacity: 1 }} />
         </linearGradient>
       </defs>
+      {/* Icon part */}
       <path
-        d="M10 25 C 20 10, 30 40, 40 25 S 50 10, 60 25 S 70 40, 80 25"
+        d="M20 10 Q25 5, 30 10 T40 10 M20 25 Q25 20, 30 25 T40 25 M20 40 Q25 35, 30 40 T40 40"
         stroke="url(#logoGradient)"
-        strokeWidth="4"
+        strokeWidth="3"
         fill="none"
         strokeLinecap="round"
-        strokeLinejoin="round"
       />
+      <circle cx="25" cy="10" r="3" fill="hsl(var(--primary))" />
+      <circle cx="25" cy="25" r="3" fill="hsl(var(--accent))" />
+      <circle cx="25" cy="40" r="3" fill="hsl(var(--primary))" />
+      
+      {/* Text part */}
       <text
-        x="90"
-        y="32"
+        x="55" // Adjusted x position for text
+        y="33" // Adjusted y position for vertical alignment
         fontFamily="'Space Grotesk', sans-serif"
-        fontSize="24"
+        fontSize="26" // Slightly increased font size
         fill="hsl(var(--foreground))"
         fontWeight="bold"
+        letterSpacing="-0.5"
       >
         FluxFlow
       </text>
