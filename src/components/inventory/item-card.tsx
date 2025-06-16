@@ -1,3 +1,4 @@
+
 "use client";
 
 import type { InventoryItem } from '@/types';
@@ -8,6 +9,7 @@ import { Package, TrendingUp, AlertTriangle, CalendarDays, DollarSign, Tag } fro
 import { format, parseISO } from 'date-fns';
 import StockAdjuster from './stock-adjuster';
 import { useState } from 'react';
+import { cn } from '@/lib/utils'; // Added import
 
 interface InventoryItemCardProps {
   item: InventoryItem;
