@@ -1,8 +1,9 @@
+
 "use client";
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Boxes, Brain, LayoutDashboard, Truck } from 'lucide-react';
+import { Boxes, Brain, LayoutDashboard, Truck, Settings, UserCircle } from 'lucide-react';
 
 import type { NavItem } from '@/types';
 import { cn } from '@/lib/utils';
@@ -32,6 +33,16 @@ export const navItems: NavItem[] = [
     title: 'AI Suggestions',
     href: '/ai-suggestions',
     icon: Brain,
+  },
+  {
+    title: 'Settings',
+    href: '/settings',
+    icon: Settings,
+  },
+  {
+    title: 'Profile',
+    href: '/profile',
+    icon: UserCircle,
   },
 ];
 

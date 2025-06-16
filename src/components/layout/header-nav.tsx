@@ -1,3 +1,4 @@
+
 "use client";
 
 import { SidebarTrigger } from '@/components/ui/sidebar';
@@ -24,12 +25,16 @@ export function HeaderNav() {
            </Link>
         </div>
         <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon" aria-label="Settings">
-            <Settings className="h-5 w-5" />
-          </Button>
-          <Button variant="ghost" size="icon" aria-label="User Account">
-            <UserCircle className="h-5 w-5" />
-          </Button>
+          <Link href="/settings" passHref>
+            <Button variant="ghost" size="icon" aria-label="Settings">
+              <Settings className="h-5 w-5" />
+            </Button>
+          </Link>
+          <Link href="/profile" passHref>
+            <Button variant="ghost" size="icon" aria-label="User Account">
+              <UserCircle className="h-5 w-5" />
+            </Button>
+          </Link>
         </div>
       </div>
     </header>

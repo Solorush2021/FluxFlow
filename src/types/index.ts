@@ -1,9 +1,10 @@
+
 import type { LucideIcon } from 'lucide-react';
 
 export interface NavItem {
   title: string;
   href: string;
-  icon: LucideIcon;
+  icon: LucideIcon; // Ensure LucideIcon is used here
   label?: string;
   disabled?: boolean;
 }
